@@ -8,10 +8,12 @@ const usersRoutes = Router();
 
 
 function myMiddleware(req, res, next) { 
-    
+    console.log("Você passou pelo MIDDLEWARE!")
+    next()
 }
 
 
-usersRoutes.post("/", (usersController.create))
+usersRoutes.post("/", myMiddleware, usersController.create)
+usersRoutes.put("/:id", usersController.update)
 
 module.exports = usersRoutes
