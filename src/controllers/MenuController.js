@@ -14,7 +14,7 @@ class MenuController {
             restaurant_id
         })
 
-        res.json()
+        return res.json()
     }
 
     async show(req, res) {

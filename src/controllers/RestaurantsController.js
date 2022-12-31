@@ -12,7 +12,7 @@ class RestaurantsController {
             cover_image
         })
 
-        res.json()
+        return res.json()
     }
 
     async search(req, res) {
