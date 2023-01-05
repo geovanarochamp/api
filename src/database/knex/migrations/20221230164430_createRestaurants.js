@@ -3,7 +3,9 @@ exports.up = knex => knex.schema.createTable("restaurants", table => {
     table.text("name").notNullable()
     table.text("description")
     table.text("profile_image")
-    table.text("cover_image")
+    table.float("rate")
+    table.text("delivery_time")
+    table.float("delivery_fee")
 
 });
 

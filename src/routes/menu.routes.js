@@ -7,7 +7,7 @@ const menuRoutes = Router();
 
 const menuController = new MenuController()
 
-restaurantsRoutes.use(ensureAuthenticated)
+menuRoutes.use(ensureAuthenticated)
 
 menuRoutes.post("/:restaurant_id", menuController.create)
 menuRoutes.get("/:restaurant_id", menuController.show)
