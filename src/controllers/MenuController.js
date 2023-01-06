@@ -11,6 +11,7 @@ class MenuController {
             description,
             type,
             item_image,
+            price,
             restaurant_id
         })
 
