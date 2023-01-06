@@ -4,6 +4,7 @@ exports.up = knex => knex.schema.createTable("menu", table => {
     table.text("description")
     table.text("type").notNullable()
     table.text("item_image")
+    table.float("price")
     table.integer("restaurant_id").references("id").inTable("restaurants").onDelete("CASCADE")
 });
 

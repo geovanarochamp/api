@@ -10,6 +10,6 @@ const menuController = new MenuController()
 menuRoutes.use(ensureAuthenticated)
 
 menuRoutes.post("/:restaurant_id", menuController.create)
-menuRoutes.get("/:restaurant_id", menuController.show)
+menuRoutes.get("/:restaurant_id", menuController.index)
 
 module.exports = menuRoutes

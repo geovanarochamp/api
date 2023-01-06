@@ -10,6 +10,6 @@ const routes = Router()
 routes.use("/users", usersRouter)
 routes.use("/sessions", sessionsRouter)
 routes.use("/restaurants", restaurantsRouter)
-routes.use("/menu", menuRouter)
+routes.use("/restaurantmenu", menuRouter)
 
 module.exports = routes

@@ -17,13 +17,13 @@ class MenuController {
         return res.json()
     }
 
-    async show(req, res) {
+    async index(req, res) {
         const { restaurant_id } = req.params
 
         const restaurant = await knex("restaurants").where({ id: restaurant_id })
         const menu = await knex("menu").where({ restaurant_id: restaurant_id }).orderBy("type")
-
-        return res.json({ ...restaurant, menu })
+        const types = await knex.select('type').from('menu').where({ restaurant_id: restaurant_id })
+        return res.json({ restaurant: restaurant, menu, types })
     }
 }
 
